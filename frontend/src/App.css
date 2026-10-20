@@ -1,0 +1,32 @@
+.app {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 0 16px;
+  text-align: center;
+}
+
+.app__title {
+  margin-bottom: 16px;
+}
+
+.app__status {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.app__status--loading {
+  background: #eef0f3;
+  color: #57606a;
+}
+
+.app__status--ok {
+  background: #dafbe1;
+  color: #116329;
+}
+
+.app__status--error {
+  background: #ffebe9;
+  color: #a40e26;
+}
