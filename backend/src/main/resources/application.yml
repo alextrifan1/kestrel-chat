@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: kestrel
+
+  datasource:
+    url: jdbc:postgresql://localhost:${DB_PORT:5432}/kestrel
+    username: ${DB_USER:kestrel}
+    password: ${DB_PASSWORD:kestrel}
+
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        format_sql: true
+
+  flyway:
+    locations: classpath:db/migration
+
+server:
+  port: 8080
