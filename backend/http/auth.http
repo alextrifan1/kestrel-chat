@@ -1,0 +1,29 @@
+### 4. Login, correct (expect 200 + user JSON)
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "ALEX@example.com",
+  "password": "correct-horse-battery"
+}
+
+### 5. Login, wrong password (expect 401)
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "alex@example.com",
+  "password": "wrong-password-123"
+}
+
+### 6. Login, unknown email (expect 401, same body as #5)
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "nobody@example.com",
+  "password": "whatever-123"
+}
+
+### 7
+GET http://localhost:8080/api/anything
